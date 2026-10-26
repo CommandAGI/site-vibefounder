@@ -14,8 +14,10 @@ their current hosts until the integrator moves them; `vibefounder.dev` serves Vi
   `hreflang` alternates, and the footer's one language button (the **A/文** glyph) that opens a dialog of plain links to
   the other locales' static pages. `lang.js` adds the dialog's fallbacks and the browser-language hint; there is no
   redirect.
-- `about.html`, `privacy.html` — what VibeFounder is, and what the site keeps (nothing: the bench runs in the browser).
-  English only for now (`docs/next.md` in the CommandAGI repository says so).
+- `about.html`, `es/about.html`, `zh/about.html`, `privacy.html`, `es/privacy.html`, `zh/privacy.html` — what
+  VibeFounder is, and what the site keeps (nothing: the bench runs in the browser), in the same three locales as the
+  home page. Each page lists the other two as `hreflang` alternates and its picker moves between the three pages of the
+  same name, so a reader of Spanish stays on the Spanish about page.
 - `app/` — the founding bench, the working first version:
   - `match.mjs` — pure: `rankCoFounders` scores ten sample co-founders on the domain they share, the craft the founder
     lacks and the hours they can give, and `foundingAgreement` drafts the agreement. No DOM, no storage, no network.
@@ -23,10 +25,13 @@ their current hosts until the integrator moves them; `vibefounder.dev` serves Vi
     `sample-`), with no photograph and no way to reach a person.
   - `strings.mjs` — the app's words in `en`, `es` and `zh-Hans`, with `t()` and `localeOf()`.
   - `app.js` — the page: the form, the ranked list, the agreement (copy or download `.md`) and the first week's
-    checklist. Answers live in the tab's session storage, the checklist and the language in local storage.
+    checklist. Answers live in the tab's session storage, the checklist and the language in local storage. Its about
+    and privacy links follow the language it is being read in (`[data-page]`), so they land on `es/about.html` in
+    Spanish rather than the English page.
 - `test/site.test.mjs` — the site's own tests: every local link resolves, every page carries its policy and the one
-  A/文 button, the three locale homes have the same alternates, the matching ranks the gap first, and every English
-  word has its Spanish and Chinese.
+  A/文 button, the three locale homes have the same alternates, the about and privacy pages are one page per locale
+  with no English sentence copied into a translation, the matching ranks the gap first, and every English word has its
+  Spanish and Chinese.
 - `site.json` — the site hosting manifest (slug `vibefounder`).
 
 The page's policy is `connect-src 'none'`: nothing on this site reaches the network. The ecosystem list links out to the

@@ -18,7 +18,7 @@ import { STRINGS, t, localeOf } from '../app/strings.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const read = file => readFileSync(path.join(root, file), 'utf8');
-const PAGES = ['index.html', 'es/index.html', 'zh/index.html', 'about.html', 'privacy.html', 'app/index.html'];
+const PAGES = ['index.html', 'es/index.html', 'zh/index.html', 'about.html', 'es/about.html', 'zh/about.html', 'privacy.html', 'es/privacy.html', 'zh/privacy.html', 'app/index.html'];
 const LOCALES = ['en', 'es', 'zh-Hans'];
 
 /** The site's own files, by the paths the pages may point at. */
@@ -161,6 +161,68 @@ test('a locale is read from its tag, and every English word has its Spanish and 
             const placeholders = text => [...String(text).matchAll(/\{(\w+)\}/g)].map(m => m[1]).sort();
             assert.deepEqual(placeholders(STRINGS[locale][key]), placeholders(STRINGS.en[key]), `${locale}'s ${key} has other placeholders`);
         }
+    }
+});
+
+test('about and privacy are one page in three locales: each lists the other two, and no translation is the English page', () => {
+    // A page per locale is the site's static-locale mechanism; the alternates of `about.html` are the three about pages,
+    // not the home pages, so a browser that asks for Spanish is offered the Spanish about page and no other.
+    const main = html => (html.match(/<main>([\s\S]*?)<\/main>/) ?? [, ''])[1];
+    const shape = text => ({
+        headings: (text.match(/<h[12][^>]*>/g) ?? []).length,
+        paragraphs: (text.match(/<p[^>]*>/g) ?? []).length,
+        items: (text.match(/<li[^>]*>/g) ?? []).length,
+    });
+    for (const name of ['about.html', 'privacy.html']) {
+        const pages = { en: name, es: `es/${name}`, 'zh-Hans': `zh/${name}` };
+        for (const [locale, page] of Object.entries(pages)) {
+            assert.ok(existsSync(path.join(root, page)), `${page} is missing`);
+            const html = read(page);
+            assert.match(html, new RegExp(`<html lang="${locale}"`), `${page} is not ${locale}`);
+            const alternates = Object.fromEntries([...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)].map(([, tag, href]) => [tag, href]));
+            assert.deepEqual(Object.keys(alternates).sort(), ['en', 'es', 'x-default', 'zh-Hans'], `${page} has the alternates ${Object.keys(alternates).join(', ')}`);
+            for (const [tag, target] of Object.entries(pages)) {
+                const resolved = path.posix.normalize(path.posix.join(path.posix.dirname(page), alternates[tag]));
+                assert.equal(resolved, target, `${page}'s ${tag} alternate points at ${alternates[tag]} (${resolved}), not ${target}`);
+            }
+            assert.equal(path.posix.normalize(path.posix.join(path.posix.dirname(page), alternates['x-default'])), name, `${page}'s x-default is not the English page`);
+            // The picker offers the same three pages, and marks the one being read.
+            const from = html.indexOf('class="lang-list"');
+            const list = html.slice(from, html.indexOf('</ul>', from));
+            const offered = [...list.matchAll(/<a href="([^"]+)" hreflang="([^"]+)"( aria-current="true")?/g)].map(m => ({ href: m[1], tag: m[2], current: Boolean(m[3]) }));
+            assert.deepEqual(offered.map(o => o.tag), ['en', 'es', 'zh-Hans'], `${page}'s picker offers ${offered.map(o => o.tag).join(', ')}`);
+            assert.deepEqual(offered.filter(o => o.current).map(o => o.tag), [locale], `${page}'s picker checks ${offered.filter(o => o.current).map(o => o.tag).join(', ')}, not its own locale`);
+            for (const option of offered)
+                assert.equal(path.posix.normalize(path.posix.join(path.posix.dirname(page), option.href)), pages[option.tag], `${page}'s picker sends ${option.tag} to ${option.href}`);
+        }
+        // The same sections, in other words: a page copied from the English one keeps its sentences.
+        const english = main(read(name));
+        for (const page of [`es/${name}`, `zh/${name}`]) {
+            const translated = main(read(page));
+            assert.deepEqual(shape(translated), shape(english), `${page} does not hold the same sections as ${name}`);
+            for (const sentence of english.split(/<p[^>]*>|<li[^>]*>|<h[12][^>]*>/).map(part => part.replace(/<[^>]+>/g, '').trim()).filter(part => part.split(/\s+/).length >= 8))
+                assert.ok(!translated.includes(sentence.split(/\s+/).slice(0, 6).join(' ')), `${page} carries the English sentence "${sentence.slice(0, 60)}…"`);
+        }
+    }
+});
+
+test('the home page and the bench link the about and privacy page of the language being read', () => {
+    for (const [page, folder] of [['index.html', ''], ['es/index.html', 'es/'], ['zh/index.html', 'zh/']]) {
+        for (const name of ['about.html', 'privacy.html']) {
+            const refs = [...read(page).matchAll(new RegExp(`href="([^"]*${name})"`, 'g'))].map(m => path.posix.normalize(path.posix.join(path.posix.dirname(page), m[1])));
+            assert.ok(refs.includes(`${folder}${name}`), `${page} does not link ${folder}${name} (it links ${refs.join(', ') || 'none'})`);
+            if (folder) assert.ok(!refs.includes(name), `${page} links the English ${name}`);
+        }
+    }
+    // The bench is one page in three languages: its links move with the language (app.js), so the two static hrefs are
+    // the English ones, and app.js carries a folder for each locale.
+    const app = read('app/index.html');
+    assert.equal((app.match(/data-page="about\.html"/g) ?? []).length, 2, 'the bench does not mark both its about links');
+    assert.equal((app.match(/data-page="privacy\.html"/g) ?? []).length, 1, 'the bench does not mark its privacy link');
+    const script = read('app/app.js');
+    for (const folder of ["'../es/'", "'../zh/'"]) assert.ok(script.includes(folder), `the bench's links do not follow the language to ${folder}`);
+    for (const name of ['about.html', 'privacy.html']) {
+        assert.ok(files.has(`es/${name}`) && files.has(`zh/${name}`), `the bench links ${name} in a locale that has none`);
     }
 });
 

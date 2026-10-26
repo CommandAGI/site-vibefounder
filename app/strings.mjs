@@ -4,7 +4,7 @@
  */
 export const STRINGS = {
     en: {
-        'nav.home': 'Home', 'nav.bench': 'The bench', 'nav.ecosystem': 'The ecosystem', 'nav.about': 'About', 'nav.cta': 'Find your co-founder',
+        'nav.home': 'Home', 'nav.bench': 'The bench', 'nav.ecosystem': 'The ecosystem', 'nav.about': 'About', 'nav.privacy': 'Privacy', 'nav.cta': 'Find your co-founder',
         'app.title': 'The founding bench',
         'app.lede': 'Say what you are building, what you are good at and the hours you can give. The bench ranks the sample co-founders by the gap your team has, and says why each one fits.',
         'app.note': 'Sample co-founders: fictional people, drawn in this browser. Nothing is sent, no account is needed, and nothing is saved after you close the tab except the checklist below.',
@@ -41,7 +41,7 @@ export const STRINGS = {
         'commitment.full-time': 'Full-time', 'commitment.part-time': 'Nights and weekends',
     },
     es: {
-        'nav.home': 'Inicio', 'nav.bench': 'El banco', 'nav.ecosystem': 'El ecosistema', 'nav.about': 'Quiénes somos', 'nav.cta': 'Encuentra tu cofundador',
+        'nav.home': 'Inicio', 'nav.bench': 'El banco', 'nav.ecosystem': 'El ecosistema', 'nav.about': 'Quiénes somos', 'nav.privacy': 'Privacidad', 'nav.cta': 'Encuentra tu cofundador',
         'app.title': 'El banco de fundadores',
         'app.lede': 'Di qué estás construyendo, qué sabes hacer y cuántas horas puedes dar. El banco ordena los cofundadores de muestra por el hueco que tiene tu equipo, y dice por qué encaja cada uno.',
         'app.note': 'Cofundadores de muestra: personas ficticias, dibujadas en este navegador. No se envía nada, no hace falta cuenta, y no se guarda nada al cerrar la pestaña salvo la lista de abajo.',
@@ -78,7 +78,7 @@ export const STRINGS = {
         'commitment.full-time': 'Tiempo completo', 'commitment.part-time': 'Noches y fines de semana',
     },
     'zh-Hans': {
-        'nav.home': '首页', 'nav.bench': '创始席', 'nav.ecosystem': '生态', 'nav.about': '关于', 'nav.cta': '寻找联合创始人',
+        'nav.home': '首页', 'nav.bench': '创始席', 'nav.ecosystem': '生态', 'nav.about': '关于', 'nav.privacy': '隐私', 'nav.cta': '寻找联合创始人',
         'app.title': '创始席',
         'app.lede': '说明你在做什么、擅长什么、能投入多少时间。创始席按你团队缺的那一块给样本联合创始人排序，并说明每个人为什么合适。',
         'app.note': '样本联合创始人：虚构人物，在此浏览器中生成。不发送任何数据，不需要账号；关闭标签页后只保留下面的清单。',

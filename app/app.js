@@ -40,6 +40,10 @@ function applyLocale() {
     $('.lang-dialog__close').setAttribute('aria-label', t(locale, 'lang.close'));
     for (const a of document.querySelectorAll('.lang-list a'))
         a.setAttribute('aria-current', a.dataset.lang === locale ? 'true' : 'false');
+    // The about and privacy pages are one page per locale: the link follows this page's language, so a visitor
+    // reading the bench in Spanish is not sent to the English page.
+    const folder = { en: '../', es: '../es/', 'zh-Hans': '../zh/' }[locale];
+    for (const a of document.querySelectorAll('[data-page]')) a.href = `${folder}${a.dataset.page}`;
     buildSelect($('#founder-craft'), CRAFTS, 'craft');
     buildSelect($('#founder-domain'), DOMAINS, 'domain');
     buildChips();
