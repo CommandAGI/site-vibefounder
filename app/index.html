@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The founding bench — VibeFounder</title>
+<meta name="description" content="Match with a sample co-founder, read the founding agreement it drafts, and work the first week's checklist. Runs in this browser on fictional people.">
+<meta name="theme-color" content="#fcfbf7">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<link rel="canonical" href="https://vibefounder.commandagi.app/app/">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__bar wrap">
+    <a class="brand" href="../" aria-label="VibeFounder, home">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M4 27 15 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M28 27 17 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="16" cy="24" r="3" fill="currentColor"/></svg>
+      <span>VibeFounder</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../" data-t="nav.home">Home</a></li>
+        <li><a href="../#ecosystem" data-t="nav.ecosystem">The ecosystem</a></li>
+        <li><a href="../about.html" data-t="nav.about">About</a></li>
+      </ul>
+    </nav>
+    <div class="site-header__actions">
+      <a class="button button--quiet" href="../" data-t="nav.cta">Find your co-founder</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap stack">
+      <p class="label" data-t="nav.bench">The bench</p>
+      <h1 data-t="app.title">The founding bench</h1>
+      <p class="lede" data-t="app.lede">Say what you are building, what you are good at and the hours you can give.</p>
+      <p class="hint" data-t="app.note">Sample co-founders: fictional people.</p>
+    </div>
+  </section>
+
+  <section id="bench">
+    <div class="wrap bench">
+      <form class="cols" id="founder-form" aria-labelledby="bench-form-heading">
+        <h2 id="bench-form-heading" class="sr-only" data-t="app.title">The founding bench</h2>
+        <label class="field"><span data-t="form.name">Your name, for the agreement</span>
+          <input type="text" id="founder-name" autocomplete="off" data-placeholder="form.namePlaceholder">
+        </label>
+        <label class="field"><span data-t="form.craft">What you do</span>
+          <select id="founder-craft"></select>
+        </label>
+        <label class="field"><span data-t="form.domain">What you are building</span>
+          <select id="founder-domain"></select>
+        </label>
+        <div class="field"><span id="commitment-label" data-t="form.commitment">The hours you can give</span>
+          <div class="chips" id="founder-commitment" role="group" aria-labelledby="commitment-label"></div>
+        </div>
+        <div class="field"><span aria-hidden="true">&nbsp;</span>
+          <button class="button" type="submit" id="submit" data-t="find">Find matches</button>
+        </div>
+      </form>
+
+      <div id="bench-results" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="first-week">
+    <div class="wrap stack">
+      <h2 data-t="checklist.title">The first week</h2>
+      <p class="hint" data-t="checklist.lede">What a founder settles before the first line of the product. Kept in this browser only.</p>
+      <form class="stack" id="checklist"></form>
+      <p class="hint mono" id="checklist-progress"></p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__cols">
+      <div class="stack">
+        <a class="brand" href="../">
+          <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M4 27 15 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M28 27 17 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="16" cy="24" r="3" fill="currentColor"/></svg>
+          <span>VibeFounder</span>
+        </a>
+        <p data-t="footer.pitch">The founder-facing hub of the vibe ecosystem. Build, fund, ship, govern.</p>
+      </div>
+      <div>
+        <p class="label" data-t="nav.bench">The bench</p>
+        <p><a href="../about.html" data-t="nav.about">About VibeFounder</a></p>
+        <p><a href="../privacy.html">Privacy</a></p>
+      </div>
+    </div>
+    <div class="site-footer__base">
+      <span data-t="footer.legal">© 2026 VibeFounder, a company of CommandAGI.</span>
+      <div class="lang">
+        <button type="button" class="lang-btn" commandfor="lang-dialog" command="show-modal" aria-haspopup="dialog" aria-label="Language" title="Language"><span class="lang-btn__glyph" aria-hidden="true">A<span>/</span><span lang="zh-Hans">文</span></span></button>
+        <noscript><nav class="lang-links" aria-label="Languages"><a href="?lang=en" hreflang="en"><span lang="en">English</span></a><a href="?lang=es" hreflang="es"><span lang="es">Español</span></a><a href="?lang=zh" hreflang="zh-Hans"><span lang="zh-Hans">简体中文</span></a></nav></noscript>
+        <dialog id="lang-dialog" class="lang-dialog" aria-labelledby="lang-dialog-title" closedby="any">
+          <div class="lang-dialog__box">
+            <div class="lang-dialog__head">
+              <h2 id="lang-dialog-title" data-t="lang.title">Choose a language</h2>
+              <form method="dialog"><button class="lang-dialog__close" aria-label="Close" data-t="lang.close"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button></form>
+            </div>
+            <ul class="lang-list" role="list">
+              <li><a href="?lang=en" hreflang="en" data-lang="en"><span lang="en">English</span></a></li>
+              <li><a href="?lang=es" hreflang="es" data-lang="es"><span lang="es">Español</span></a></li>
+              <li><a href="?lang=zh" hreflang="zh-Hans" data-lang="zh-Hans"><span lang="zh-Hans">简体中文</span></a></li>
+            </ul>
+          </div>
+        </dialog>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

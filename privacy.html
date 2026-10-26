@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy — VibeFounder</title>
+<meta name="description" content="What VibeFounder keeps: nothing on a server. The bench runs in your browser, the checklist is in your browser's storage, and no analytics run on this site.">
+<meta name="theme-color" content="#fcfbf7">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<link rel="canonical" href="https://vibefounder.commandagi.app/privacy.html">
+<link rel="alternate" hreflang="en" href="./">
+<link rel="alternate" hreflang="es" href="es/">
+<link rel="alternate" hreflang="zh-Hans" href="zh/">
+<link rel="alternate" hreflang="x-default" href="./">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__bar wrap">
+    <a class="brand" href="./" aria-label="VibeFounder, home">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M4 27 15 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M28 27 17 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="16" cy="24" r="3" fill="currentColor"/></svg>
+      <span>VibeFounder</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="app/">The bench</a></li>
+        <li><a href="index.html#ecosystem">The ecosystem</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <div class="site-header__actions"><a class="button" href="app/">Find your co-founder</a></div>
+  </div>
+  <p id="lang-hint" class="wrap hint" hidden><a href="es/"></a></p>
+</header>
+
+<main>
+  <section>
+    <div class="wrap prose">
+      <p class="label">Privacy</p>
+      <h1>Nothing about you reaches a server.</h1>
+      <p class="lede">VibeFounder's site and its bench run in your browser. There is no account and no analytics.</p>
+      <h2>What the bench keeps</h2>
+      <ul>
+        <li>Your answers to the bench (your craft, the domain, the hours, the name you type) live in this tab's session storage. They go when you close the tab.</li>
+        <li>The first week's checklist and the language you chose live in this browser's local storage, on your device. Clear the site's data to remove them.</li>
+        <li>The founding agreement is drawn in this browser. It is copied or downloaded only when you press the button.</li>
+      </ul>
+      <h2>What this site does not do</h2>
+      <ul>
+        <li>It sets no cookie and loads no third-party script, font, image or tracker. Every file comes from this site.</li>
+        <li>It sends nothing: the page's policy sets <span class="mono">connect-src 'none'</span>.</li>
+        <li>It asks for no account, no email address and no payment.</li>
+      </ul>
+      <h2>Leaving the site</h2>
+      <p>The ecosystem list links to the other vibe startups' own sites. Once you follow one, that site's privacy notice applies.</p>
+      <h2>Writing to us</h2>
+      <p>If you send an email to <a href="mailto:hello@vibefounder.dev">hello@vibefounder.dev</a>, we keep it to answer you.</p>
+      <p class="hint">Last changed 2026-10-26.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__cols">
+      <div class="stack">
+        <a class="brand" href="./">
+          <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M4 27 15 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M28 27 17 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="16" cy="24" r="3" fill="currentColor"/></svg>
+          <span>VibeFounder</span>
+        </a>
+        <p>The founder-facing hub of the vibe ecosystem. Build, fund, ship, govern.</p>
+        <p><a class="button" href="app/">Find your co-founder</a></p>
+      </div>
+      <div>
+        <p class="label">The bench</p>
+        <p><a href="app/">Match with a co-founder</a></p>
+        <p><a href="about.html">About VibeFounder</a></p>
+        <p><a href="privacy.html">Privacy</a></p>
+      </div>
+    </div>
+    <div class="site-footer__base">
+      <span>© 2026 VibeFounder, a company of CommandAGI.</span>
+      <div class="lang">
+        <button type="button" class="lang-btn" commandfor="lang-dialog" command="show-modal" aria-haspopup="dialog" aria-label="Language" title="Language"><span class="lang-btn__glyph" aria-hidden="true">A<span>/</span><span lang="zh-Hans">文</span></span></button>
+        <noscript><nav class="lang-links" aria-label="Languages"><a href="./" hreflang="en"><span lang="en">English</span></a><a href="es/" hreflang="es"><span lang="es">Español</span></a><a href="zh/" hreflang="zh-Hans"><span lang="zh-Hans">简体中文</span></a></nav></noscript>
+        <dialog id="lang-dialog" class="lang-dialog" aria-labelledby="lang-dialog-title" closedby="any">
+          <div class="lang-dialog__box">
+            <div class="lang-dialog__head">
+              <h2 id="lang-dialog-title">Choose a language</h2>
+              <form method="dialog"><button class="lang-dialog__close" aria-label="Close"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button></form>
+            </div>
+            <ul class="lang-list" role="list">
+              <li><a href="./" hreflang="en" aria-current="true" autofocus><span lang="en">English</span><svg class="lang-list__check" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+              <li><a href="es/" hreflang="es"><span lang="es">Español</span></a></li>
+              <li><a href="zh/" hreflang="zh-Hans"><span lang="zh-Hans">简体中文</span></a></li>
+            </ul>
+          </div>
+        </dialog>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="lang.js"></script>
+</body>
+</html>
