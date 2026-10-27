@@ -51,3 +51,17 @@ interaction 8, technical quality 8, craft 8. Average 8.2, none below 8.
 
 Against the set (live, 2026-10-26): the only site with a bottom tool dock as its nav, the only one whose shape is the
 multiplayer name tag (one square corner), the only grotesk-only site on parchment, the only cobalt + marigold duotone.
+
+## performance (live, https://vibefounder.commandagi.app/, 2026-10-26)
+
+Playwright Chromium, slow 4G (150 ms RTT, 1.6 Mbps down) and 4× CPU slowdown, cache off (`/tmp` scripts of the
+session; the method is the one Lighthouse's mobile preset uses):
+
+| width | LCP | CLS |
+|---|---|---|
+| 1440 | 1.08 s | 0.011 |
+| 390 | 1.70 s | 0.071 |
+
+Interaction: the slowest event of four craft picks and the film's pause button, at 4× CPU, took 32 ms (budget 200).
+Script before interaction: `home.js` 8 KB, `lang.js` 3 KB and the bench's three modules 19 KB, raw; no framework.
+The films start only on screen (`preload="none"`), so they are outside the first screen's bytes.
