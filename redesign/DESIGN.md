@@ -13,7 +13,7 @@ adjectives about people.
 ## type
 
 One family, the full range: **Schibsted Grotesk** variable (wght 400–900, roman and italic), self-hosted, subset to
-Latin + punctuation (49 KB + 52 KB woff2), `font-display: swap` with a metric-matched Arial fallback
+Latin, Latin Extended-A and punctuation (56 KB + 59 KB woff2), `font-display: swap` with a metric-matched Arial fallback
 (`size-adjust`, `ascent-override`).
 
 - Display: 900, tracking −0.05em, line-height 0.86, `clamp(3.4rem, 11vw, 12.5rem)`. Headings are composed, not

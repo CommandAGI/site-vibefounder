@@ -30,7 +30,7 @@ Sizes: duet 366 KB AV1 / 622 KB H.264, sheet 192 KB / 323 KB, posters 68 KB, pro
   by the two overlapping squares, cobalt and marigold, with their overlap in the duo colour.
 - `brand/favicon.svg`: the same two squares. `brand/og.png` (1200×630) and `brand/touch-icon.png` (180×180) are
   screenshots of `redesign/og.html`.
-- `fonts/`: Schibsted Grotesk (OFL, `fonts/OFL.txt`), roman and italic variable, subset to Latin with `pyftsubset`.
+- `fonts/`: Schibsted Grotesk (OFL, `fonts/OFL.txt`), roman and italic variable, subset to Latin and Latin Extended-A (Petrović, Dvořák) with `pyftsubset`.
 
 ## the locales
 
