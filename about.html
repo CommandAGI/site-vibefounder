@@ -5,36 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About VibeFounder</title>
 <meta name="description" content="What VibeFounder is: the founder-facing hub of the vibe ecosystem, a startup of CommandAGI's vibe family. What it does with a founder's answers, and what it does not do.">
-<meta name="theme-color" content="#fcfbf7">
+<meta name="theme-color" content="#f2e9da">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
 <link rel="canonical" href="https://vibefounder.commandagi.app/about.html">
 <link rel="alternate" hreflang="en" href="about.html">
 <link rel="alternate" hreflang="es" href="es/about.html">
 <link rel="alternate" hreflang="zh-Hans" href="zh/about.html">
 <link rel="alternate" hreflang="x-default" href="about.html">
+<link rel="icon" href="brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="brand/touch-icon.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to the page</a>
 <header class="site-header">
-  <div class="site-header__bar wrap">
-    <a class="brand" href="./" aria-label="VibeFounder, home">
-      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M4 27 15 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M28 27 17 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="16" cy="24" r="3" fill="currentColor"/></svg>
-      <span>VibeFounder</span>
-    </a>
-    <nav class="site-nav" aria-label="Main">
-      <ul>
-        <li><a href="app/">The bench</a></li>
-        <li><a href="index.html#ecosystem">The ecosystem</a></li>
-        <li><a href="about.html" aria-current="page">About</a>
-      <a href="team.html">Team</a></li>
-      </ul>
-    </nav>
-    <div class="site-header__actions"><a class="button" href="app/">Find your co-founder</a></div>
-  </div>
-  <p id="lang-hint" class="wrap hint" hidden><a href="es/about.html"></a></p>
+  <a class="brand" href="./" aria-label="VibeFounder, home"><img src="brand/wordmark.svg" alt="" width="240" height="33"></a>
+  <nav class="site-header__links" aria-label="Company">
+    <a href="about.html" aria-current="page">About</a>
+    <a href="team.html">Team</a>
+    <a class="site-header__extra" href="privacy.html">Privacy</a>
+  </nav>
+  <p id="lang-hint" class="hint" hidden><a href="es/about.html"></a></p>
 </header>
 
-<main>
+<nav class="dock" aria-label="Main">
+  <a class="dock__primary" href="app/"><kbd>1</kbd>Bench</a>
+  <a href="./#half"><kbd>2</kbd><span class="dock__long">Missing </span>half</a>
+  <a href="./#proof"><kbd>3</kbd>Proof</a>
+  <a href="./#agreement"><kbd>4</kbd><span class="dock__long">The </span>deal</a>
+  <a href="./#ecosystem"><kbd>5</kbd>Startups</a>
+</nav>
+
+<main id="main">
   <section>
     <div class="wrap prose">
       <p class="label">About</p>
@@ -59,10 +61,7 @@
   <div class="wrap">
     <div class="site-footer__cols">
       <div class="stack">
-        <a class="brand" href="./">
-          <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M4 27 15 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M28 27 17 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="16" cy="24" r="3" fill="currentColor"/></svg>
-          <span>VibeFounder</span>
-        </a>
+        <a class="brand" href="./" aria-label="VibeFounder, home"><img src="brand/wordmark.svg" alt="" width="240" height="33"></a>
         <p>The founder-facing hub of the vibe ecosystem. Build, fund, ship, govern.</p>
         <p><a class="button" href="app/">Find your co-founder</a></p>
       </div>

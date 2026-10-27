@@ -267,6 +267,14 @@ function wireLanguage() {
     });
 }
 
+// The tool dock's keys, as on the other pages (lang.js): 1–4 follow its links unless focus is in a field.
+addEventListener('keydown', e => {
+    if (e.altKey || e.ctrlKey || e.metaKey || e.isComposing) return;
+    if (e.target.closest?.('input, select, textarea, [contenteditable], dialog')) return;
+    const link = document.querySelectorAll('.dock a')[Number(e.key) - 1];
+    if (link) { e.preventDefault(); link.click(); }
+});
+
 wireForm();
 wireLanguage();
 applyLocale();

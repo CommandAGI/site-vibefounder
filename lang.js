@@ -52,4 +52,12 @@
         hint.hidden = false;
         return;
     }
+
+    // The tool dock's keys: 1–5 follow its links, unless focus is in a field or a modifier is held.
+    addEventListener('keydown', e => {
+        if (e.altKey || e.ctrlKey || e.metaKey || e.isComposing) return;
+        if (e.target.closest?.('input, select, textarea, [contenteditable], dialog')) return;
+        const link = document.querySelectorAll('.dock a')[Number(e.key) - 1];
+        if (link) { e.preventDefault(); link.click(); }
+    });
 })();

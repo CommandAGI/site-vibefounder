@@ -2,106 +2,232 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VibeFounder — find the co-founder who ships with you</title>
-<meta name="description" content="VibeFounder is the founder-facing hub of the vibe ecosystem: a founding bench that matches founders with co-founders, and the map of the startups that build, fund, ship and govern.">
-<meta name="theme-color" content="#fcfbf7">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VibeFounder — find the other half of your company</title>
+<meta name="description" content="VibeFounder is the founder-facing hub of the vibe ecosystem: a founding bench that matches the craft you lack, drafts the founding agreement, and maps the startups that build, fund, ship and govern.">
+<meta name="theme-color" content="#f2e9da">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
 <link rel="canonical" href="https://vibefounder.commandagi.app/">
 <link rel="alternate" hreflang="en" href="./">
 <link rel="alternate" hreflang="es" href="es/">
 <link rel="alternate" hreflang="zh-Hans" href="zh/">
 <link rel="alternate" hreflang="x-default" href="./">
-<meta property="og:title" content="VibeFounder — find the co-founder who ships with you">
+<meta property="og:title" content="VibeFounder — find the other half of your company">
 <meta property="og:description" content="The founder-facing hub of the vibe ecosystem. A founding bench, a founding agreement and the map of the vibe startups.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://vibefounder.commandagi.app/">
+<meta property="og:image" content="https://vibefounder.commandagi.app/brand/og.png">
 <meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="brand/touch-icon.png">
+<link rel="preload" href="fonts/schibsted-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/schibsted-ital.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to the page</a>
 <header class="site-header">
-  <div class="site-header__bar wrap">
-    <a class="brand" href="./" aria-label="VibeFounder, home">
-      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M4 27 15 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M28 27 17 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="16" cy="24" r="3" fill="currentColor"/></svg>
-      <span>VibeFounder</span>
-    </a>
-    <nav class="site-nav" aria-label="Main">
-      <ul>
-        <li><a href="app/">The bench</a></li>
-        <li><a href="#ecosystem">The ecosystem</a></li>
-        <li><a href="about.html">About</a>
-      <a href="team.html">Team</a></li>
-      </ul>
-    </nav>
-    <div class="site-header__actions">
-      <a class="button" href="app/">Find your co-founder</a>
-    </div>
-  </div>
-  <p id="lang-hint" class="wrap hint" hidden><a href="es/"></a></p>
+  <a class="brand" href="./" aria-label="VibeFounder, home"><img src="brand/wordmark.svg" alt="" width="240" height="33"></a>
+  <nav class="site-header__links" aria-label="Company">
+    <a href="about.html">About</a>
+    <a href="team.html">Team</a>
+    <a class="site-header__extra" href="privacy.html">Privacy</a>
+  </nav>
+  <p id="lang-hint" class="hint" hidden><a href="es/"></a></p>
 </header>
 
-<main>
-  <section class="hero">
-    <div class="wrap stack">
-      <p class="label">The founder-facing hub of the vibe ecosystem</p>
-      <h1>Find the co-founder who ships with you.</h1>
-      <p class="lede">VibeFounder matches founders with co-founders, and points a founder at the startups that build, fund, ship and govern. Start with the founding bench: say what you are building, what you are good at and the hours you can give, and read the sample co-founders whose craft, domain and commitment fit the gap.</p>
-      <div class="hero__actions">
-        <a class="button" href="app/">Open the founding bench</a>
-        <a class="button button--quiet" href="about.html">What VibeFounder is</a>
+<nav class="dock" aria-label="Main">
+  <a class="dock__primary" href="app/"><kbd>1</kbd>Bench</a>
+  <a href="#half"><kbd>2</kbd><span class="dock__long">Missing </span>half</a>
+  <a href="#proof"><kbd>3</kbd>Proof</a>
+  <a href="#agreement"><kbd>4</kbd><span class="dock__long">The </span>deal</a>
+  <a href="#ecosystem"><kbd>5</kbd>Startups</a>
+</nav>
+
+<main id="main">
+  <section class="hero canvas" aria-labelledby="hero-title">
+    <div class="wrap hero__grid">
+      <div>
+        <h1 id="hero-title"><span class="w w--a">Find</span> <span class="w w--a">the</span> <span class="w w--b">other</span> <span class="w w--b">half</span> <span class="w w--a">of</span> <span class="w w--a">your</span> <span class="w w--both">company.</span></h1>
+        <p class="lede">A founding bench that matches the craft you lack, drafts the agreement, and shows you the rest of the room.</p>
+        <div class="hero__actions">
+          <a class="button" href="app/">Open the founding bench</a>
+          <a class="button button--quiet" href="#half">Try it here</a>
+        </div>
+        <p class="hero__note">Sample co-founders are fictional. The bench runs in this browser, sends nothing and needs no account.</p>
       </div>
-      <p class="hero__note">The bench runs in this browser on fictional sample co-founders. It sends nothing, asks for no account, and costs nothing.</p>
+      <figure class="hero__side" aria-labelledby="thing-cap">
+        <svg class="thing" viewBox="0 0 430 360" aria-hidden="true" focusable="false">
+          <rect class="fill-duo pop" style="--d:.2s" x="120" y="150" width="110" height="130" opacity=".9"/>
+          <path class="a draw" data-hand="a" fill="none" stroke-width="7" stroke-linejoin="miter" d="M30 150H230V330H30Z"/>
+          <path class="a draw" data-hand="a" fill="none" stroke-width="5" d="M60 190H130V240H190"/>
+          <path class="a draw" data-hand="a" fill="none" stroke-width="5" d="M60 300H110V270H130"/>
+          <rect class="fill-a pop" style="--d:.35s" x="140" y="262" width="56" height="44"/>
+          <path class="b draw" data-hand="b" fill="none" stroke-width="7" stroke-linejoin="miter" d="M120 60H400V280H120Z"/>
+          <path class="b draw" data-hand="b" fill="none" stroke-width="5" d="M330 110A60 60 0 1 1 329.9 110"/>
+          <circle class="fill-b pop" style="--d:.5s" cx="330" cy="170" r="18"/>
+          <circle class="fill-b pop" style="--d:.6s" cx="372" cy="252" r="9"/>
+        </svg>
+        <figcaption class="figcap" id="thing-cap"><b>Fig. 1</b> One thing, two hands: you draw the board, a co-founder draws the box. Where they overlap is the company. Illustrative.</figcaption>
+      </figure>
+    </div>
+    <div class="cursor cursor--a" data-cursor="a" hidden><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M2 1.5v17l4.6-4.4 3.1 6.6 3-1.4-3-6.4H16z" fill="currentColor" stroke="#f2e9da" stroke-width="1.4"/></svg><span>You · code</span></div>
+    <div class="cursor cursor--b" data-cursor="b" hidden><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M2 1.5v17l4.6-4.4 3.1 6.6 3-1.4-3-6.4H16z" fill="currentColor" stroke="#3b1726" stroke-width="1.4"/></svg><span>Sample co-founder · design</span></div>
+  </section>
+
+  <section class="film" aria-labelledby="film-title" data-film>
+    <video muted loop playsinline preload="none" poster="media/duet.jpg" aria-hidden="true" tabindex="-1">
+      <source src="media/duet.av1.mp4" type='video/mp4; codecs="av01.0.05M.08"'>
+      <source src="media/duet.mp4" type="video/mp4">
+    </video>
+    <div class="film__cap">
+      <span class="tagline">Generated film. Not real people.</span>
+      <button class="film__toggle" type="button" data-play="Play film" data-pause="Pause film">Play film</button>
+    </div>
+    <div class="film__words">
+      <h2 id="film-title">One bench.</h2>
+      <p class="big">Two pairs of hands.</p>
     </div>
   </section>
 
-  <section id="bench">
-    <div class="wrap stack">
-      <p class="label">What the bench does</p>
-      <h2>Three things a founder needs on day one: a partner, a brief, a map.</h2>
-      <div class="cols">
-        <div class="feature">
-          <h3>It matches the gap</h3>
-          <p>Tell the bench what you are building, your craft and the hours you can give. It ranks the sample co-founders by what your team is missing, and says why each one fits: the craft you lack, the domain you share, the commitment that matches.</p>
+  <section class="scene canvas" id="half" aria-labelledby="half-title">
+    <div class="wrap">
+      <div class="scene__head">
+        <p class="num">01 · The missing half</p>
+        <h2 id="half-title"><span class="a">You are one craft.</span> <em>The company needs the others.</em></h2>
+      </div>
+      <div class="half__grid">
+        <div>
+          <p class="lede">Pick yours. The bench’s own matcher names the sample co-founder who covers the gap, and why.</p>
+          <fieldset class="crafts" data-crafts>
+            <legend>What you do</legend>
+            <button class="chip" type="button" data-craft="code" aria-pressed="true">code</button>
+            <button class="chip" type="button" data-craft="cad" aria-pressed="false">CAD</button>
+            <button class="chip" type="button" data-craft="hardware" aria-pressed="false">hardware</button>
+            <button class="chip" type="button" data-craft="design" aria-pressed="false">design</button>
+            <button class="chip" type="button" data-craft="growth" aria-pressed="false">growth</button>
+            <button class="chip" type="button" data-craft="ops" aria-pressed="false">operations</button>
+          </fieldset>
+          <p class="hint" style="margin-top:1.4rem">Matched for a startup, full-time, against ten fictional sample co-founders. <a href="app/">Change the domain and the hours at the bench.</a></p>
         </div>
-        <div class="feature">
-          <h3>It drafts the founding agreement</h3>
-          <p>Pick a co-founder and the bench writes a founding agreement you can read in full: equal founders, four years of vesting with a one-year cliff, the work assigned to the company, and the decisions that need both of you. Keep it as a file and take it to a lawyer.</p>
-        </div>
-        <div class="feature">
-          <h3>It draws the map</h3>
-          <p>The vibe ecosystem in one place: the startups that make the tools a young company uses, and the ones that fund it, govern it and ship it. Each is its own company with its own site.</p>
+        <div class="ring" role="img" aria-labelledby="ring-desc">
+          <svg viewBox="0 0 600 600" aria-hidden="true" focusable="false">
+            <path class="seg is-a" data-craft="code" d="M306.4 70.1A230 230 0 0 1 495.9 179.5"/>
+            <path class="seg" data-craft="cad" d="M502.3 190.6A230 230 0 0 1 502.3 409.4"/>
+            <path class="seg" data-craft="hardware" d="M495.9 420.5A230 230 0 0 1 306.4 529.9"/>
+            <path class="seg is-b" data-craft="design" d="M293.6 529.9A230 230 0 0 1 104.1 420.5"/>
+            <path class="seg is-b" data-craft="growth" d="M97.7 409.4A230 230 0 0 1 97.7 190.6"/>
+            <path class="seg" data-craft="ops" d="M104.1 179.5A230 230 0 0 1 293.6 70.1"/>
+            <text class="seg-label is-a" data-craft="code" x="415" y="100.8">code</text>
+            <text class="seg-label" data-craft="cad" x="530" y="300">CAD</text>
+            <text class="seg-label" data-craft="hardware" x="415" y="499.2">hardware</text>
+            <text class="seg-label is-b" data-craft="design" x="185" y="499.2">design</text>
+            <text class="seg-label is-b" data-craft="growth" x="70" y="300">growth</text>
+            <text class="seg-label" data-craft="ops" x="185" y="100.8">operations</text>
+          </svg>
+          <div class="ring__core" id="ring-desc" aria-live="polite">
+            <span class="sample">Sample co-founder</span>
+            <span class="who" data-who>Mei Tanaka</span>
+            <span class="why" data-why>Covers design, growth.</span>
+            <span class="score" data-score>9 of 9</span>
+          </div>
         </div>
       </div>
-      <p><a class="button" href="app/">Open the founding bench</a></p>
     </div>
   </section>
 
-  <section id="ecosystem">
-    <div class="wrap stack">
-      <p class="label">The ecosystem</p>
-      <h2>The vibe startups.</h2>
-      <p class="lede">VibeFounder is one of them. A founder who starts here needs the rest: the factory that makes startups, the tools that build one, and the ones that fund and govern it.</p>
-      <ul class="grid-ecosystem">
-        <li><a href="https://vibestartup.us"><span class="eco-name">VibeStartup</span><span class="eco-what">The startup factory. It makes startups like this one.</span></a></li>
-        <li><a href="https://vibecad.pro"><span class="eco-name">VibeCAD</span><span class="eco-what">Parts and assemblies, designed in code.</span></a></li>
-        <li><a href="https://vibecode.ooo"><span class="eco-name">VibeCode</span><span class="eco-what">Software that agents write and run.</span></a></li>
-        <li><a href="https://vibecloud.pro"><span class="eco-name">VibeCloud</span><span class="eco-what">Compute and storage for a young company.</span></a></li>
-        <li><a href="https://vibecut.me"><span class="eco-name">VibeCut</span><span class="eco-what">Video, cut to the beat.</span></a></li>
-        <li><a href="https://vibeforce.pro"><span class="eco-name">VibeForce</span><span class="eco-what">The operations of a company that runs itself.</span></a></li>
-        <li><a href="https://vibefund.pro"><span class="eco-name">VibeFund</span><span class="eco-what">Capital for the founders it backs.</span></a></li>
-        <li><a href="https://vibegov.pro"><span class="eco-name">VibeGov</span><span class="eco-what">Formation, filings and the rules a company keeps.</span></a></li>
+  <section class="scene" id="proof" aria-labelledby="proof-title">
+    <div class="wrap proof__grid">
+      <figure class="plate">
+        <picture>
+          <source srcset="media/proof.avif" type="image/avif">
+          <img src="media/proof.jpg" width="960" height="1200" loading="lazy" decoding="async" alt="Overhead: a hand-soldered board, a printed bracket, a wireframe sketch, a page of code and a cardboard prototype on a linen bench; a hand in a blue sleeve and a hand in a yellow sleeve each touch one.">
+        </picture>
+        <figcaption class="figcap"><b>Generated image.</b> Not real people, not real work.</figcaption>
+      </figure>
+      <div>
+        <p class="num">02 · Proof, not bios</p>
+        <h2 id="proof-title" style="margin-top:1.2rem">Show what you <em>made.</em></h2>
+        <ul class="bio" aria-label="What a bio says, struck out">
+          <li>Serial entrepreneur.</li>
+          <li>Passionate about disruption.</li>
+          <li>Visionary leader.</li>
+        </ul>
+        <div class="shipped">
+          <p class="label">What the bench reads instead</p>
+          <p class="big">Ships a hardware product <em>from a folding table:</em> the enclosure, the board and the line that makes it.</p>
+          <p class="hint">Amara Okafor, a sample co-founder: fictional, drawn to show the matching.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene canvas" id="agreement" aria-labelledby="agreement-title">
+    <div class="wrap">
+      <div class="scene__head">
+        <p class="num">03 · The agreement</p>
+        <h2 id="agreement-title">Write it down <em>while you still agree.</em></h2>
+      </div>
+      <div class="agree__film" data-film>
+        <video muted loop playsinline preload="none" poster="media/sheet.jpg" aria-hidden="true" tabindex="-1">
+          <source src="media/sheet.av1.mp4" type='video/mp4; codecs="av01.0.05M.08"'>
+          <source src="media/sheet.mp4" type="video/mp4">
+        </video>
+        <div class="film__cap">
+          <span class="tagline">Generated film. Not real people.</span>
+          <button class="film__toggle" type="button" data-play="Play film" data-pause="Pause film">Play film</button>
+        </div>
+      </div>
+      <div class="split">
+        <div><p class="pct pct--a">50</p><p>You</p></div>
+        <div><p class="pct pct--b"><span>50</span></p><p>Your co-founder</p></div>
+      </div>
+      <div class="vest" role="img" aria-label="Vesting over 48 months: nothing vests before the cliff at month 12, then a share every month to month 48.">
+        <div class="vest__track" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="vest__axis" aria-hidden="true"><span>Month 0</span><span>The cliff · 12</span><span>48</span></div>
+      </div>
+      <ul class="terms">
+        <li><b>4 years</b>of vesting for both</li>
+        <li><b>1-year</b>cliff before any of it</li>
+        <li><b>The work</b>belongs to the company</li>
+        <li><b>Both of you</b>sign the big decisions</li>
       </ul>
-      <p class="hint">These links leave VibeFounder for the other companies' own sites. VibeFounder points at them; it does not run them.</p>
+      <div class="agree__cta">
+        <a class="button" href="app/">Draft yours at the bench</a>
+        <p class="hint">A draft to take to a lawyer, not legal advice. Copy it or keep it as a file.</p>
+      </div>
     </div>
   </section>
 
-  <section id="contact">
-    <div class="wrap stack">
-      <p class="label">Talk to us</p>
-      <h2>A co-founder is a conversation.</h2>
-      <p class="lede">Write to <a href="mailto:hello@vibefounder.dev">hello@vibefounder.dev</a>. Say what you are building, what you can do and what you cannot, and what you have already shipped. A person reads it.</p>
-      <p class="hint">VibeFounder is a startup of CommandAGI's vibe family. Its operating home is <span class="mono">companies/vibefounder/</span> in CommandAGI's Drive; this site is the repository <span class="mono">CommandAGI/site-vibefounder</span>.</p>
+  <section class="scene" id="ecosystem" aria-labelledby="ecosystem-title">
+    <div class="wrap">
+      <div class="scene__head">
+        <p class="num">04 · The rest of the room</p>
+        <h2 id="ecosystem-title">Then meet <em>the vibe startups.</em></h2>
+        <p class="lede">VibeFounder is one of them. The others make the tools, the money and the rules a young company needs.</p>
+      </div>
+      <ul class="grid-ecosystem">
+        <li><a href="https://vibestartup.us"><span class="eco-name">VibeStartup</span><span class="eco-what">The startup factory. It makes startups like this one.</span><span class="eco-host" aria-hidden="true">vibestartup.us ↗</span></a></li>
+        <li><a href="https://vibecad.pro"><span class="eco-name">VibeCAD</span><span class="eco-what">Parts and assemblies, designed in code.</span><span class="eco-host" aria-hidden="true">vibecad.pro ↗</span></a></li>
+        <li><a href="https://vibecode.ooo"><span class="eco-name">VibeCode</span><span class="eco-what">Software that agents write and run.</span><span class="eco-host" aria-hidden="true">vibecode.ooo ↗</span></a></li>
+        <li><a href="https://vibecloud.pro"><span class="eco-name">VibeCloud</span><span class="eco-what">Compute and storage for a young company.</span><span class="eco-host" aria-hidden="true">vibecloud.pro ↗</span></a></li>
+        <li><a href="https://vibecut.me"><span class="eco-name">VibeCut</span><span class="eco-what">Video, cut to the beat.</span><span class="eco-host" aria-hidden="true">vibecut.me ↗</span></a></li>
+        <li><a href="https://vibeforce.pro"><span class="eco-name">VibeForce</span><span class="eco-what">The operations of a company that runs itself.</span><span class="eco-host" aria-hidden="true">vibeforce.pro ↗</span></a></li>
+        <li><a href="https://vibefund.pro"><span class="eco-name">VibeFund</span><span class="eco-what">Capital for the founders it backs.</span><span class="eco-host" aria-hidden="true">vibefund.pro ↗</span></a></li>
+        <li><a href="https://vibegov.pro"><span class="eco-name">VibeGov</span><span class="eco-what">Formation, filings and the rules a company keeps.</span><span class="eco-host" aria-hidden="true">vibegov.pro ↗</span></a></li>
+      </ul>
+      <p class="hint" style="margin-top:1.2rem">These links leave VibeFounder for the other companies’ own sites. VibeFounder points at them; it does not run them.</p>
+    </div>
+  </section>
+
+  <section class="talk" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <p class="num" style="color:inherit">05 · Talk to us</p>
+      <h2 id="contact-title" style="margin-top:1.2rem">A co-founder is <em>a conversation.</em></h2>
+      <a class="mail" href="mailto:hello@vibefounder.dev">hello@vibefounder.dev</a>
+      <p>Say what you are building, what you can do and what you cannot, and what you have already shipped. A person reads it.</p>
+      <p class="hint">VibeFounder is a startup of CommandAGI’s vibe family. Its operating home is <span class="mono">companies/vibefounder/</span> in CommandAGI’s Drive; this site is the repository <span class="mono">CommandAGI/site-vibefounder</span>.</p>
     </div>
   </section>
 </main>
@@ -109,18 +235,19 @@
 <footer class="site-footer">
   <div class="wrap">
     <div class="site-footer__cols">
-      <div class="stack">
-        <a class="brand" href="./">
-          <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M4 27 15 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M28 27 17 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="16" cy="24" r="3" fill="currentColor"/></svg>
-          <span>VibeFounder</span>
-        </a>
+      <div>
+        <a class="brand" href="./" aria-label="VibeFounder, home"><img src="brand/wordmark.svg" alt="" width="240" height="33"></a>
         <p>The founder-facing hub of the vibe ecosystem. Build, fund, ship, govern.</p>
-        <p><a class="button" href="app/">Find your co-founder</a></p>
       </div>
       <div>
         <p class="label">The bench</p>
         <p><a href="app/">Match with a co-founder</a></p>
+        <p><a href="app/">Draft the agreement</a></p>
+      </div>
+      <div>
+        <p class="label">The company</p>
         <p><a href="about.html">About VibeFounder</a></p>
+        <p><a href="team.html">Team</a></p>
         <p><a href="privacy.html">Privacy</a></p>
       </div>
     </div>
@@ -147,5 +274,6 @@
   </div>
 </footer>
 <script src="lang.js"></script>
+<script type="module" src="home.js"></script>
 </body>
 </html>

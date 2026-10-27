@@ -29,7 +29,7 @@ their current hosts until the integrator moves them; `vibefounder.dev` serves Vi
     and privacy links follow the language it is being read in (`[data-page]`), so they land on `es/about.html` in
     Spanish rather than the English page.
 - `test/site.test.mjs` — the site's own tests: every local link resolves, every page carries its policy and the one
-  A/文 button, the three locale homes have the same alternates, the about and privacy pages are one page per locale
+  A/文 button, every film is muted, posted, under 3 MB and labeled generated, the ring offers the bench's crafts, the three locale homes have the same alternates, the about and privacy pages are one page per locale
   with no English sentence copied into a translation, the matching ranks the gap first, and every English word has its
   Spanish and Chinese.
 - `site.json` — the site hosting manifest (slug `vibefounder`).
@@ -39,9 +39,19 @@ other vibe startups' own sites, and those links are the only way off.
 
 ## the look
 
-The tokens and the type are CommandAGI's public sites' (`sites/components/1-tokens.css` in the CommandAGI repository,
-the owner's code): a warm paper ground and warm ink, a serif for display, one grotesk for text, a mono for records,
-square corners, no gradients, dark from `prefers-color-scheme`.
+The 2027 redesign, "the duet" (`redesign/DESIGN.md`, by the brief of CommandAGI's `docs/design/startup-redesign-2027.md`):
+two people building one thing. One family (Schibsted Grotesk, self-hosted in `fonts/`), parchment and oxblood, cobalt
+for you and marigold for the co-founder, and their OKLCH mix where they overlap. The one shape is the multiplayer name
+tag (top-left corner square); the nav is a tool dock at the bottom (keys 1–5, `lang.js`). Light only.
+
+- `home.js` — the home page's scenes in the three locales: two cursors co-write the headline and co-build Fig. 1; the
+  "missing half" ring runs `app/match.mjs` on the sample co-founders; the films play only on screen, with a pause
+  button. With reduced motion or no script, every scene is the composed still the HTML already holds.
+- `media/` — generated film and stills (fal), each labeled generated on the page; `brand/` — the wordmark, favicon,
+  touch icon and share image.
+- `redesign/` — the audit (`CONTENT.md`), the spec (`DESIGN.md`), the notes (`NOTES.md`: prompts, models, costs,
+  scores) and the scripts that made the media, the wordmark and the locale homes (`locales.py` writes `es/` and `zh/`
+  from the English home).
 
 ## run and deploy
 

@@ -8,7 +8,7 @@
  * page without its alternates, a sample co-founder who is not marked fictional, and a string a locale lacks.
  */
 import assert from 'node:assert/strict';
-import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import path from 'node:path';
 import { test } from 'node:test';
 import { fileURLToPath } from 'node:url';
@@ -231,4 +231,42 @@ test('site.json names the site this folder is deployed as', () => {
     assert.equal(manifest.slug, 'vibefounder');
     assert.equal(manifest.status, 'active');
     assert.ok(manifest.description && manifest.description.length > 40, 'the description is the site\'s line in the sites app');
+});
+
+test('every film is muted, inline, posted, compressed, and says it is generated', () => {
+    // The 2027 redesign's rules (redesign/DESIGN.md, CommandAGI docs/design/startup-redesign-2027.md §1 and §3): a loop
+    // never plays sound, has a poster for reduced motion, stays under ~3 MB, and nothing generated poses as real people.
+    for (const page of ['index.html', 'es/index.html', 'zh/index.html']) {
+        const html = read(page);
+        const films = [...html.matchAll(/<(section|div) class="[^"]*" [^>]*data-film>([\s\S]*?)<\/video>([\s\S]*?)<\/div>/g)];
+        assert.equal(films.length, 2, `${page} has ${films.length} films, not two`);
+        for (const [, , video, after] of films) {
+            assert.match(video, /<video muted loop playsinline preload="none" poster="([^"]+)"/, `${page}: a film is not muted, inline and lazy with a poster`);
+            const dir = path.posix.dirname(page);
+            const sources = [video.match(/poster="([^"]+)"/)[1], ...[...video.matchAll(/<source src="([^"]+)"/g)].map(m => m[1])];
+            assert.equal(sources.length, 3, `${page}: a film lacks its AV1 and H.264 sources`);
+            for (const src of sources) {
+                const file = path.posix.normalize(path.posix.join(dir, src));
+                assert.ok(files.has(file), `${page} plays ${src}, which is not in the site`);
+                assert.ok(statSync(path.join(root, file)).size < 3 * 1024 * 1024, `${file} is over 3 MB`);
+            }
+            assert.match(after, /class="tagline"/, `${page}: a film does not say it is generated`);
+            assert.match(after, /class="film__toggle"/, `${page}: a film has no pause button`);
+        }
+        assert.match(html, /<b>[^<]+<\/b>[^<]*(real|reales|并非|真人)/, `${page}: the generated image does not say it is not real`);
+    }
+});
+
+test('the missing-half scene offers exactly the bench’s crafts, in every locale', () => {
+    for (const [page, locale] of [['index.html', 'en'], ['es/index.html', 'es'], ['zh/index.html', 'zh-Hans']]) {
+        const html = read(page);
+        const chips = [...html.matchAll(/<button class="chip" type="button" data-craft="([^"]+)"[^>]*>([^<]+)</g)];
+        assert.deepEqual(chips.map(m => m[1]), CRAFTS, `${page}'s chips are ${chips.map(m => m[1]).join(', ')}`);
+        for (const [, craft, words] of chips) assert.equal(words, t(locale, `craft.${craft}`), `${page} names ${craft} "${words}"`);
+        const segments = [...html.matchAll(/<path class="seg[^"]*" data-craft="([^"]+)"/g)].map(m => m[1]);
+        assert.deepEqual(segments, CRAFTS, `${page}'s ring is ${segments.join(', ')}`);
+        // The composed ring (no script, reduced motion) shows what the matcher answers for its pressed chip.
+        const [top] = rankCoFounders(PROFILES, { craft: 'code', domain: 'startup', commitment: 'full-time' });
+        assert.ok(html.includes(`data-who>${top.profile.name}<`), `${page}'s still ring does not name ${top.profile.name}`);
+    }
 });

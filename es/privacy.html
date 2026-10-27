@@ -5,35 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacidad — VibeFounder</title>
 <meta name="description" content="Qué guarda VibeFounder: nada en un servidor. El banco funciona en tu navegador, la lista está en el almacenamiento de tu navegador y este sitio no tiene analítica.">
-<meta name="theme-color" content="#fcfbf7">
+<meta name="theme-color" content="#f2e9da">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
 <link rel="canonical" href="https://vibefounder.commandagi.app/es/privacy.html">
 <link rel="alternate" hreflang="en" href="../privacy.html">
 <link rel="alternate" hreflang="es" href="privacy.html">
 <link rel="alternate" hreflang="zh-Hans" href="../zh/privacy.html">
 <link rel="alternate" hreflang="x-default" href="../privacy.html">
+<link rel="icon" href="../brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../brand/touch-icon.png">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<a class="skip" href="#main">Saltar a la página</a>
 <header class="site-header">
-  <div class="site-header__bar wrap">
-    <a class="brand" href="../" aria-label="VibeFounder, inicio">
-      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M4 27 15 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M28 27 17 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="16" cy="24" r="3" fill="currentColor"/></svg>
-      <span>VibeFounder</span>
-    </a>
-    <nav class="site-nav" aria-label="Principal">
-      <ul>
-        <li><a href="../app/?lang=es">El banco</a></li>
-        <li><a href="../index.html#ecosistema">El ecosistema</a></li>
-        <li><a href="about.html">Quiénes somos</a></li>
-      </ul>
-    </nav>
-    <div class="site-header__actions"><a class="button" href="../app/?lang=es">Encuentra tu cofundador</a></div>
-  </div>
-  <p id="lang-hint" class="wrap hint" hidden><a href="../privacy.html"></a></p>
+  <a class="brand" href="./" aria-label="VibeFounder, inicio"><img src="../brand/wordmark.svg" alt="" width="240" height="33"></a>
+  <nav class="site-header__links" aria-label="Empresa">
+    <a href="about.html">Quiénes somos</a>
+    <a href="../team.html">Equipo</a>
+    <a class="site-header__extra" href="privacy.html" aria-current="page">Privacidad</a>
+  </nav>
+  <p id="lang-hint" class="hint" hidden><a href="../privacy.html"></a></p>
 </header>
 
-<main>
+<nav class="dock" aria-label="Principal">
+  <a class="dock__primary" href="../app/?lang=es"><kbd>1</kbd>Banco</a>
+  <a href="./#half"><kbd>2</kbd>Mitad<span class="dock__long"> que falta</span></a>
+  <a href="./#proof"><kbd>3</kbd>Pruebas</a>
+  <a href="./#agreement"><kbd>4</kbd><span class="dock__long">El </span>acuerdo</a>
+  <a href="./#ecosystem"><kbd>5</kbd>Startups</a>
+</nav>
+
+<main id="main">
   <section>
     <div class="wrap prose">
       <p class="label">Privacidad</p>
@@ -64,10 +67,7 @@
   <div class="wrap">
     <div class="site-footer__cols">
       <div class="stack">
-        <a class="brand" href="../">
-          <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M4 27 15 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M28 27 17 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="16" cy="24" r="3" fill="currentColor"/></svg>
-          <span>VibeFounder</span>
-        </a>
+        <a class="brand" href="./" aria-label="VibeFounder, inicio"><img src="../brand/wordmark.svg" alt="" width="240" height="33"></a>
         <p>El centro de los fundadores del ecosistema vibe. Construir, financiar, entregar, gobernar.</p>
         <p><a class="button" href="../app/?lang=es">Encuentra tu cofundador</a></p>
       </div>

@@ -4,6 +4,8 @@
  */
 export const STRINGS = {
     en: {
+        'skip': 'Skip to the page', 'nav.team': 'Team', 'dock.bench': 'Bench', 'dock.week': 'First week', 'dock.startups': 'Startups',
+        'half.covers': 'Covers {crafts}.', 'half.join': ', ', 'half.you': 'You',
         'nav.home': 'Home', 'nav.bench': 'The bench', 'nav.ecosystem': 'The ecosystem', 'nav.about': 'About', 'nav.privacy': 'Privacy', 'nav.cta': 'Find your co-founder',
         'app.title': 'The founding bench',
         'app.lede': 'Say what you are building, what you are good at and the hours you can give. The bench ranks the sample co-founders by the gap your team has, and says why each one fits.',
@@ -41,6 +43,8 @@ export const STRINGS = {
         'commitment.full-time': 'Full-time', 'commitment.part-time': 'Nights and weekends',
     },
     es: {
+        'skip': 'Saltar a la página', 'nav.team': 'Equipo', 'dock.bench': 'Banco', 'dock.week': 'Primera semana', 'dock.startups': 'Startups',
+        'half.covers': 'Cubre {crafts}.', 'half.join': ', ', 'half.you': 'Tú',
         'nav.home': 'Inicio', 'nav.bench': 'El banco', 'nav.ecosystem': 'El ecosistema', 'nav.about': 'Quiénes somos', 'nav.privacy': 'Privacidad', 'nav.cta': 'Encuentra tu cofundador',
         'app.title': 'El banco de fundadores',
         'app.lede': 'Di qué estás construyendo, qué sabes hacer y cuántas horas puedes dar. El banco ordena los cofundadores de muestra por el hueco que tiene tu equipo, y dice por qué encaja cada uno.',
@@ -78,6 +82,8 @@ export const STRINGS = {
         'commitment.full-time': 'Tiempo completo', 'commitment.part-time': 'Noches y fines de semana',
     },
     'zh-Hans': {
+        'skip': '跳到正文', 'nav.team': '团队', 'dock.bench': '创始席', 'dock.week': '第一周', 'dock.startups': '公司',
+        'half.covers': '覆盖{crafts}。', 'half.join': '、', 'half.you': '你',
         'nav.home': '首页', 'nav.bench': '创始席', 'nav.ecosystem': '生态', 'nav.about': '关于', 'nav.privacy': '隐私', 'nav.cta': '寻找联合创始人',
         'app.title': '创始席',
         'app.lede': '说明你在做什么、擅长什么、能投入多少时间。创始席按你团队缺的那一块给样本联合创始人排序，并说明每个人为什么合适。',

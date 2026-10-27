@@ -2,105 +2,232 @@
 <html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VibeFounder — 找到与你一起交付的联合创始人</title>
-<meta name="description" content="VibeFounder 是 vibe 生态中面向创始人的中心：一个把创始人与联合创始人配对的创始席，以及构建、融资、交付与治理这一生态的创业公司地图。">
-<meta name="theme-color" content="#fcfbf7">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VibeFounder — 找到另一半，一起做公司</title>
+<meta name="description" content="VibeFounder 是 vibe 生态中面向创始人的中心：一个创始席，为你匹配你缺少的手艺，起草创始协议，并画出构建、融资、交付和治理的创业公司地图。">
+<meta name="theme-color" content="#f2e9da">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
 <link rel="canonical" href="https://vibefounder.commandagi.app/zh/">
 <link rel="alternate" hreflang="en" href="../">
 <link rel="alternate" hreflang="es" href="../es/">
 <link rel="alternate" hreflang="zh-Hans" href="./">
 <link rel="alternate" hreflang="x-default" href="../">
-<meta property="og:title" content="VibeFounder — 找到与你一起交付的联合创始人">
-<meta property="og:description" content="vibe 生态中面向创始人的中心：创始席、创始协议，以及 vibe 创业公司的地图。">
+<meta property="og:title" content="VibeFounder — 找到另一半，一起做公司">
+<meta property="og:description" content="vibe 生态中面向创始人的中心。一个创始席、一份创始协议和 vibe 创业公司的地图。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://vibefounder.commandagi.app/zh/">
+<meta property="og:image" content="https://vibefounder.commandagi.app/brand/og.png">
 <meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../brand/touch-icon.png">
+<link rel="preload" href="../fonts/schibsted-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/schibsted-ital.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<a class="skip" href="#main">跳到正文</a>
 <header class="site-header">
-  <div class="site-header__bar wrap">
-    <a class="brand" href="../" aria-label="VibeFounder 首页">
-      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M4 27 15 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M28 27 17 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="16" cy="24" r="3" fill="currentColor"/></svg>
-      <span>VibeFounder</span>
-    </a>
-    <nav class="site-nav" aria-label="主导航">
-      <ul>
-        <li><a href="../app/?lang=zh">创始席</a></li>
-        <li><a href="#ecosystem">生态</a></li>
-        <li><a href="about.html">关于</a></li>
-      </ul>
-    </nav>
-    <div class="site-header__actions">
-      <a class="button" href="../app/?lang=zh">寻找联合创始人</a>
-    </div>
-  </div>
-  <p id="lang-hint" class="wrap hint" hidden><a href="../"></a></p>
+  <a class="brand" href="./" aria-label="VibeFounder，首页"><img src="../brand/wordmark.svg" alt="" width="240" height="33"></a>
+  <nav class="site-header__links" aria-label="公司">
+    <a href="about.html">关于</a>
+    <a href="../team.html">团队</a>
+    <a class="site-header__extra" href="privacy.html">隐私</a>
+  </nav>
+  <p id="lang-hint" class="hint" hidden><a href="../"></a></p>
 </header>
 
-<main>
-  <section class="hero">
-    <div class="wrap stack">
-      <p class="label">vibe 生态中面向创始人的中心</p>
-      <h1>找到与你一起交付的联合创始人。</h1>
-      <p class="lede">VibeFounder 把创始人与联合创始人配对，并把构建、融资、交付与治理这一生态的创业公司指给创始人。从创始席开始：说明你在做什么、擅长什么、能投入多少时间，然后读那些手艺、领域与投入正好补上你缺口的样本联合创始人。</p>
-      <div class="hero__actions">
-        <a class="button" href="../app/?lang=zh">打开创始席</a>
-        <a class="button button--quiet" href="about.html">VibeFounder 是什么</a>
+<nav class="dock" aria-label="主导航">
+  <a class="dock__primary" href="../app/?lang=zh"><kbd>1</kbd>创始席</a>
+  <a href="#half"><kbd>2</kbd>另一半</a>
+  <a href="#proof"><kbd>3</kbd>作品</a>
+  <a href="#agreement"><kbd>4</kbd>协议</a>
+  <a href="#ecosystem"><kbd>5</kbd>公司</a>
+</nav>
+
+<main id="main">
+  <section class="hero canvas" aria-labelledby="hero-title">
+    <div class="wrap hero__grid">
+      <div>
+        <h1 id="hero-title"><span class="w w--a">找到</span><span class="w w--b">另一半，</span><span class="w w--a">一起</span><span class="w w--both">做公司。</span></h1>
+        <p class="lede">一个创始席：匹配你缺少的手艺，起草协议，再把你介绍给屋里的其他人。</p>
+        <div class="hero__actions">
+          <a class="button" href="../app/?lang=zh">打开创始席</a>
+          <a class="button button--quiet" href="#half">在这里试试</a>
+        </div>
+        <p class="hero__note">样本联合创始人是虚构的。创始席在本浏览器中运行，不发送任何内容，也不需要账户。</p>
       </div>
-      <p class="hero__note">创始席在此浏览器中以虚构的样本联合创始人运行。不发送任何数据，不需要账号，也不花一分钱。</p>
+      <figure class="hero__side" aria-labelledby="thing-cap">
+        <svg class="thing" viewBox="0 0 430 360" aria-hidden="true" focusable="false">
+          <rect class="fill-duo pop" style="--d:.2s" x="120" y="150" width="110" height="130" opacity=".9"/>
+          <path class="a draw" data-hand="a" fill="none" stroke-width="7" stroke-linejoin="miter" d="M30 150H230V330H30Z"/>
+          <path class="a draw" data-hand="a" fill="none" stroke-width="5" d="M60 190H130V240H190"/>
+          <path class="a draw" data-hand="a" fill="none" stroke-width="5" d="M60 300H110V270H130"/>
+          <rect class="fill-a pop" style="--d:.35s" x="140" y="262" width="56" height="44"/>
+          <path class="b draw" data-hand="b" fill="none" stroke-width="7" stroke-linejoin="miter" d="M120 60H400V280H120Z"/>
+          <path class="b draw" data-hand="b" fill="none" stroke-width="5" d="M330 110A60 60 0 1 1 329.9 110"/>
+          <circle class="fill-b pop" style="--d:.5s" cx="330" cy="170" r="18"/>
+          <circle class="fill-b pop" style="--d:.6s" cx="372" cy="252" r="9"/>
+        </svg>
+        <figcaption class="figcap" id="thing-cap"><b>图 1</b> 一件东西，两只手：你画电路板，联合创始人画外壳。两者重叠的地方就是公司。示意图。</figcaption>
+      </figure>
+    </div>
+    <div class="cursor cursor--a" data-cursor="a" hidden><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M2 1.5v17l4.6-4.4 3.1 6.6 3-1.4-3-6.4H16z" fill="currentColor" stroke="#f2e9da" stroke-width="1.4"/></svg><span>你 · 代码</span></div>
+    <div class="cursor cursor--b" data-cursor="b" hidden><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M2 1.5v17l4.6-4.4 3.1 6.6 3-1.4-3-6.4H16z" fill="currentColor" stroke="#3b1726" stroke-width="1.4"/></svg><span>样本联合创始人 · 设计</span></div>
+  </section>
+
+  <section class="film" aria-labelledby="film-title" data-film>
+    <video muted loop playsinline preload="none" poster="../media/duet.jpg" aria-hidden="true" tabindex="-1">
+      <source src="../media/duet.av1.mp4" type='video/mp4; codecs="av01.0.05M.08"'>
+      <source src="../media/duet.mp4" type="video/mp4">
+    </video>
+    <div class="film__cap">
+      <span class="tagline">生成的影片，并非真人。</span>
+      <button class="film__toggle" type="button" data-play="播放" data-pause="暂停">播放</button>
+    </div>
+    <div class="film__words">
+      <h2 id="film-title">一张工作台。</h2>
+      <p class="big">两双手。</p>
     </div>
   </section>
 
-  <section id="bench">
-    <div class="wrap stack">
-      <p class="label">创始席做什么</p>
-      <h2>创始人第一天需要的三件事：一位合伙人、一份文件、一张地图。</h2>
-      <div class="cols">
-        <div class="feature">
-          <h3>补上缺口</h3>
-          <p>说明你在做什么、你的手艺、你能投入的时间。创始席按你团队缺的那一块给样本联合创始人排序，并说明每个人为什么合适：你缺的手艺、你们共享的领域、彼此一致的时间投入。</p>
+  <section class="scene canvas" id="half" aria-labelledby="half-title">
+    <div class="wrap">
+      <div class="scene__head">
+        <p class="num">01 · 缺少的另一半</p>
+        <h2 id="half-title"><span class="a">你是一门手艺。</span><em>公司需要其余的。</em></h2>
+      </div>
+      <div class="half__grid">
+        <div>
+          <p class="lede">选出你的。创始席自己的匹配器会说出补上空缺的样本联合创始人，以及原因。</p>
+          <fieldset class="crafts" data-crafts>
+            <legend>你做什么</legend>
+            <button class="chip" type="button" data-craft="code" aria-pressed="true">代码</button>
+            <button class="chip" type="button" data-craft="cad" aria-pressed="false">CAD</button>
+            <button class="chip" type="button" data-craft="hardware" aria-pressed="false">硬件</button>
+            <button class="chip" type="button" data-craft="design" aria-pressed="false">设计</button>
+            <button class="chip" type="button" data-craft="growth" aria-pressed="false">增长</button>
+            <button class="chip" type="button" data-craft="ops" aria-pressed="false">运营</button>
+          </fieldset>
+          <p class="hint" style="margin-top:1.4rem">按一家创业公司、全职，在十位虚构的样本联合创始人中匹配。<a href="../app/?lang=zh">到创始席更改领域和时间。</a></p>
         </div>
-        <div class="feature">
-          <h3>起草创始协议</h3>
-          <p>选定一位联合创始人，创始席就写出一份可以全文阅读的协议：两位创始人平等持股、四年归属并设一年悬崖期、工作归属公司，以及必须两人共同决定的事项。保存下来，交给律师。</p>
-        </div>
-        <div class="feature">
-          <h3>画出地图</h3>
-          <p>vibe 生态集中在一处：为年轻公司提供工具的创业公司，以及为它融资、治理和交付的那些。每一家都是独立的公司，有自己的网站。</p>
+        <div class="ring" role="img" aria-labelledby="ring-desc">
+          <svg viewBox="0 0 600 600" aria-hidden="true" focusable="false">
+            <path class="seg is-a" data-craft="code" d="M306.4 70.1A230 230 0 0 1 495.9 179.5"/>
+            <path class="seg" data-craft="cad" d="M502.3 190.6A230 230 0 0 1 502.3 409.4"/>
+            <path class="seg" data-craft="hardware" d="M495.9 420.5A230 230 0 0 1 306.4 529.9"/>
+            <path class="seg is-b" data-craft="design" d="M293.6 529.9A230 230 0 0 1 104.1 420.5"/>
+            <path class="seg is-b" data-craft="growth" d="M97.7 409.4A230 230 0 0 1 97.7 190.6"/>
+            <path class="seg" data-craft="ops" d="M104.1 179.5A230 230 0 0 1 293.6 70.1"/>
+            <text class="seg-label is-a" data-craft="code" x="415" y="100.8">代码</text>
+            <text class="seg-label" data-craft="cad" x="530" y="300">CAD</text>
+            <text class="seg-label" data-craft="hardware" x="415" y="499.2">硬件</text>
+            <text class="seg-label is-b" data-craft="design" x="185" y="499.2">设计</text>
+            <text class="seg-label is-b" data-craft="growth" x="70" y="300">增长</text>
+            <text class="seg-label" data-craft="ops" x="185" y="100.8">运营</text>
+          </svg>
+          <div class="ring__core" id="ring-desc" aria-live="polite">
+            <span class="sample">样本联合创始人</span>
+            <span class="who" data-who>Mei Tanaka</span>
+            <span class="why" data-why>覆盖设计、增长。</span>
+            <span class="score" data-score>9 / 9</span>
+          </div>
         </div>
       </div>
-      <p><a class="button" href="../app/?lang=zh">打开创始席</a></p>
     </div>
   </section>
 
-  <section id="ecosystem">
-    <div class="wrap stack">
-      <p class="label">生态</p>
-      <h2>vibe 创业公司。</h2>
-      <p class="lede">VibeFounder 是其中之一。从这里起步的创始人需要其余的：制造创业公司的工厂、构建一家公司的工具，以及为它融资和治理的那些。</p>
-      <ul class="grid-ecosystem">
-        <li><a href="https://vibestartup.us"><span class="eco-name">VibeStartup</span><span class="eco-what">创业工厂。它制造像这样的创业公司。</span></a></li>
-        <li><a href="https://vibecad.pro"><span class="eco-name">VibeCAD</span><span class="eco-what">用代码设计零件与装配。</span></a></li>
-        <li><a href="https://vibecode.ooo"><span class="eco-name">VibeCode</span><span class="eco-what">由智能体编写并运行的软件。</span></a></li>
-        <li><a href="https://vibecloud.pro"><span class="eco-name">VibeCloud</span><span class="eco-what">为年轻公司提供算力与存储。</span></a></li>
-        <li><a href="https://vibecut.me"><span class="eco-name">VibeCut</span><span class="eco-what">跟着节拍剪视频。</span></a></li>
-        <li><a href="https://vibeforce.pro"><span class="eco-name">VibeForce</span><span class="eco-what">自我运转公司的运营。</span></a></li>
-        <li><a href="https://vibefund.pro"><span class="eco-name">VibeFund</span><span class="eco-what">为它所支持的创始人提供资本。</span></a></li>
-        <li><a href="https://vibegov.pro"><span class="eco-name">VibeGov</span><span class="eco-what">公司设立、备案，以及公司遵守的规则。</span></a></li>
+  <section class="scene" id="proof" aria-labelledby="proof-title">
+    <div class="wrap proof__grid">
+      <figure class="plate">
+        <picture>
+          <source srcset="../media/proof.avif" type="image/avif">
+          <img src="../media/proof.jpg" width="960" height="1200" loading="lazy" decoding="async" alt="俯视：亚麻工作台上有一块手焊电路板、一个打印支架、一张线框草图、一页代码和一个纸板原型；一只蓝袖子的手和一只黄袖子的手各按着一件。">
+        </picture>
+        <figcaption class="figcap"><b>生成的图片。</b>并非真人，也不是真实作品。</figcaption>
+      </figure>
+      <div>
+        <p class="num">02 · 看作品，不看简介</p>
+        <h2 id="proof-title" style="margin-top:1.2rem">拿出你<em>做过的东西。</em></h2>
+        <ul class="bio" aria-label="简介里的话，已划掉">
+          <li>连续创业者。</li>
+          <li>热衷颠覆。</li>
+          <li>有远见的领导者。</li>
+        </ul>
+        <div class="shipped">
+          <p class="label">创始席读的是这些</p>
+          <p class="big">在一张<em>折叠桌上</em>做出硬件产品：外壳、电路板和生产它的产线。</p>
+          <p class="hint">Amara Okafor，一位样本联合创始人：虚构的，用来展示匹配。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene canvas" id="agreement" aria-labelledby="agreement-title">
+    <div class="wrap">
+      <div class="scene__head">
+        <p class="num">03 · 协议</p>
+        <h2 id="agreement-title">趁你们还意见一致，<em>先写下来。</em></h2>
+      </div>
+      <div class="agree__film" data-film>
+        <video muted loop playsinline preload="none" poster="../media/sheet.jpg" aria-hidden="true" tabindex="-1">
+          <source src="../media/sheet.av1.mp4" type='video/mp4; codecs="av01.0.05M.08"'>
+          <source src="../media/sheet.mp4" type="video/mp4">
+        </video>
+        <div class="film__cap">
+          <span class="tagline">生成的影片，并非真人。</span>
+          <button class="film__toggle" type="button" data-play="播放" data-pause="暂停">播放</button>
+        </div>
+      </div>
+      <div class="split">
+        <div><p class="pct pct--a">50</p><p>你</p></div>
+        <div><p class="pct pct--b"><span>50</span></p><p>你的联合创始人</p></div>
+      </div>
+      <div class="vest" role="img" aria-label="48 个月的兑现：第 12 个月的悬崖期之前不兑现，之后每月兑现一份，直到第 48 个月。">
+        <div class="vest__track" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="vest__axis" aria-hidden="true"><span>第 0 个月</span><span>悬崖期 · 12</span><span>48</span></div>
+      </div>
+      <ul class="terms">
+        <li><b>4 年</b>两人同样的兑现期</li>
+        <li><b>1 年</b>悬崖期，之前不兑现</li>
+        <li><b>成果</b>归公司所有</li>
+        <li><b>两人</b>共同签署重大决定</li>
       </ul>
-      <p class="hint">这些链接会离开 VibeFounder，前往其他公司自己的网站。VibeFounder 指向它们，并不运营它们。</p>
+      <div class="agree__cta">
+        <a class="button" href="../app/?lang=zh">在创始席起草你们的协议</a>
+        <p class="hint">这是带给律师的草稿，不是法律意见。可以复制，也可以存为文件。</p>
+      </div>
     </div>
   </section>
 
-  <section id="contact">
-    <div class="wrap stack">
-      <p class="label">联系我们</p>
-      <h2>找联合创始人是一次谈话。</h2>
-      <p class="lede">写信到 <a href="mailto:hello@vibefounder.dev">hello@vibefounder.dev</a>。说明你在做什么、你会什么、你不会什么，以及你已经交付了什么。由人来读。</p>
-      <p class="hint">VibeFounder 是 CommandAGI 的 vibe 家族中的一家创业公司。它的运营家园在 CommandAGI 云端硬盘的 <span class="mono">companies/vibefounder/</span>；本站是仓库 <span class="mono">CommandAGI/site-vibefounder</span>。</p>
+  <section class="scene" id="ecosystem" aria-labelledby="ecosystem-title">
+    <div class="wrap">
+      <div class="scene__head">
+        <p class="num">04 · 屋里的其他人</p>
+        <h2 id="ecosystem-title">然后，认识<em>vibe 创业公司。</em></h2>
+        <p class="lede">VibeFounder 是其中之一。其他公司提供一家年轻公司需要的工具、资金和规则。</p>
+      </div>
+      <ul class="grid-ecosystem">
+        <li><a href="https://vibestartup.us"><span class="eco-name">VibeStartup</span><span class="eco-what">创业公司工厂。它造出像这样的创业公司。</span><span class="eco-host" aria-hidden="true">vibestartup.us ↗</span></a></li>
+        <li><a href="https://vibecad.pro"><span class="eco-name">VibeCAD</span><span class="eco-what">用代码设计的零件和装配体。</span><span class="eco-host" aria-hidden="true">vibecad.pro ↗</span></a></li>
+        <li><a href="https://vibecode.ooo"><span class="eco-name">VibeCode</span><span class="eco-what">由智能体编写并运行的软件。</span><span class="eco-host" aria-hidden="true">vibecode.ooo ↗</span></a></li>
+        <li><a href="https://vibecloud.pro"><span class="eco-name">VibeCloud</span><span class="eco-what">给年轻公司的算力和存储。</span><span class="eco-host" aria-hidden="true">vibecloud.pro ↗</span></a></li>
+        <li><a href="https://vibecut.me"><span class="eco-name">VibeCut</span><span class="eco-what">踩着节拍剪辑的视频。</span><span class="eco-host" aria-hidden="true">vibecut.me ↗</span></a></li>
+        <li><a href="https://vibeforce.pro"><span class="eco-name">VibeForce</span><span class="eco-what">一家自己运转的公司的运营。</span><span class="eco-host" aria-hidden="true">vibeforce.pro ↗</span></a></li>
+        <li><a href="https://vibefund.pro"><span class="eco-name">VibeFund</span><span class="eco-what">给它支持的创始人的资本。</span><span class="eco-host" aria-hidden="true">vibefund.pro ↗</span></a></li>
+        <li><a href="https://vibegov.pro"><span class="eco-name">VibeGov</span><span class="eco-what">公司设立、备案和公司遵守的规则。</span><span class="eco-host" aria-hidden="true">vibegov.pro ↗</span></a></li>
+      </ul>
+      <p class="hint" style="margin-top:1.2rem">这些链接会离开 VibeFounder，前往其他公司自己的网站。VibeFounder 只是指向它们，并不运营它们。</p>
+    </div>
+  </section>
+
+  <section class="talk" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <p class="num" style="color:inherit">05 · 联系我们</p>
+      <h2 id="contact-title" style="margin-top:1.2rem">联合创始人，<em>始于一次交谈。</em></h2>
+      <a class="mail" href="mailto:hello@vibefounder.dev">hello@vibefounder.dev</a>
+      <p>说说你在做什么、你会什么、不会什么，以及你已经交付过什么。会有真人阅读。</p>
+      <p class="hint">VibeFounder 是 CommandAGI vibe 家族的一家创业公司。它的运营之家是 CommandAGI Drive 中的 <span class="mono">companies/vibefounder/</span>；本站是仓库 <span class="mono">CommandAGI/site-vibefounder</span>。</p>
     </div>
   </section>
 </main>
@@ -108,18 +235,19 @@
 <footer class="site-footer">
   <div class="wrap">
     <div class="site-footer__cols">
-      <div class="stack">
-        <a class="brand" href="../">
-          <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M4 27 15 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M28 27 17 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="16" cy="24" r="3" fill="currentColor"/></svg>
-          <span>VibeFounder</span>
-        </a>
+      <div>
+        <a class="brand" href="./" aria-label="VibeFounder，首页"><img src="../brand/wordmark.svg" alt="" width="240" height="33"></a>
         <p>vibe 生态中面向创始人的中心。构建、融资、交付、治理。</p>
-        <p><a class="button" href="../app/?lang=zh">寻找联合创始人</a></p>
       </div>
       <div>
         <p class="label">创始席</p>
-        <p><a href="../app/?lang=zh">与联合创始人配对</a></p>
+        <p><a href="../app/?lang=zh">匹配联合创始人</a></p>
+        <p><a href="../app/?lang=zh">起草协议</a></p>
+      </div>
+      <div>
+        <p class="label">公司</p>
         <p><a href="about.html">关于 VibeFounder</a></p>
+        <p><a href="../team.html">团队</a></p>
         <p><a href="privacy.html">隐私</a></p>
       </div>
     </div>
@@ -146,5 +274,6 @@
   </div>
 </footer>
 <script src="../lang.js"></script>
+<script type="module" src="../home.js"></script>
 </body>
 </html>
